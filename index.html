@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Monique Ritzer</title>
+  <link rel="stylesheet" type="text/css" href="Css/style.css">
+  <link rel="stylesheet" type="text/css" href="Css/bootstrap.css">
+  <script src="https://kit.fontawesome.com/d13b9b4bce.js" crossorigin="anonymous"></script>
+  <!-- font link from google-->
+
+<body>
+  <div class="navigation">
+    <a href="https://www.linkedin.com/in/moniqueritzer/" target="_blank">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="https://github.com/Monikernique/" target="_blank">
+      <i class="fa fa-github"></i>
+    </a>
+
+    <!---contact me popup-->
+    <i class="link far fa-paper-plane open-button" onclick="openForm()"></i>
+    <div id="relative-layer">
+      <div class="form-popup" id="myForm">
+
+
+        <form action="/action_page.php" class="form-container">
+          <h3> Send me an email</h3>
+          <h6>Don't be shy! I am always looking for new opportunities and collaborations. Looking forward to hearing
+            from
+            you </h6><br>
+
+          <label for="email"><b>Email</b></label>
+
+          <input type="text" placeholder="Enter Email" name="email" required>
+
+          <textarea id="message" placeholder="Your message here." required></textarea>
+
+
+          <button type="submit" class="btn">Send</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Cancel
+          </button>
+
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+
+  <div id="blurred-image-container">
+    <div class="img-src" style="background-image:url('images/bg_04.jpg')"></div>
+    <div class="img-src blurred-img" style="background-image:url('images/blurred/bg_04.jpg')"></div>
+  </div>
+
+  <div class="article-container">
+    <div class="article">
+      <h1>Monique Ritzer</h1>
+      <div class="content">
+        <!--Hyperlink to the different sections eventually-->
+        about me<br>
+        experience<br>
+        projects <br>
+        UIUX<br>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+<!-- JS-->
+<script type="text/javascript" src="js/bootstrap.bundle.js"></script>
+<script src="js/jquery3.6.3.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+
+</body>
+
+</html>
+
+
+<!--https://i.imgur.com/59v5xpx.jpg
+
+https://i.imgur.com/UBhaGHF.jpg
+-->
