@@ -1,7 +1,77 @@
+/*#bg {
+    -moz-transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+    -ms-transform: scale(1.0);
+    transform: scale(1.0);
+    -webkit-backface-visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+}
 
+    #bg:before, #bg:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    #bg:before {
+        -moz-transition: background-color 2.5s ease-in-out;
+        -webkit-transition: background-color 2.5s ease-in-out;
+        -ms-transition: background-color 2.5s ease-in-out;
+        transition: background-color 2.5s ease-in-out;
+        -moz-transition-delay: 0.75s;
+        -webkit-transition-delay: 0.75s;
+        -ms-transition-delay: 0.75s;
+        transition-delay: 0.75s;
+        background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png");
+        background-size: auto, 256px 256px;
+        background-position: center, center;
+        background-repeat: no-repeat, repeat;
+        z-index: 2;
+    }
+
+    #bg:after {
+        -moz-transform: scale(1.125);
+        -webkit-transform: scale(1.125);
+        -ms-transform: scale(1.125);
+        transform: scale(1.125);
+        -moz-transition: -moz-transform 0.325s ease-in-out, -moz-filter 0.325s ease-in-out;
+        -webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out;
+        -ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out;
+        transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: 1;
+    }
+
+    body.is-article-visible #bg:after {
+        -moz-transform: scale(1.0825);
+        -webkit-transform: scale(1.0825);
+        -ms-transform: scale(1.0825);
+        transform: scale(1.0825);
+        -moz-filter: blur(0.2rem);
+        -webkit-filter: blur(0.2rem);
+        -ms-filter: blur(0.2rem);
+        filter: blur(0.2rem);
+    }
+
+    body.is-loading #bg:before {
+        background-color: #000000;
+    }
+*/
 * {
   box-sizing: border-box;
   text-align: center;
+
 }
 
 /****background****/
@@ -21,31 +91,60 @@
 }
 
 
-/*header links
-
-
-sticky buttons?!*/
+/*external links*/
 .navigation {
   padding-top: 20px;
-  padding-bottom: 20px;
-
+  padding-bottom: 17px;
 }
 
-a:visited,
+.navigation a:visited,
 a:link,
 .open-button {
   text-decoration: none;
-  color: white;
+  color: #f5f5f4;
   font-size: 2.5em;
   cursor: pointer;
-  margin: 0 20px
+  margin: 0 30px 50px;
 }
 
+
+/*me*/
+.intro {
+  font-family: 'DM Serif Display', serif;
+  font-size: 3em;
+  z-index: 2;
+  position: relative;
+  margin-right: 25%;
+  color: #ffffff;
+  display: inline-block;
+}
+
+/*internal links*/
+
+.subnav a {
+  font-family: 'Arapey', serif;
+  font-size: 1.8em;
+  position: relative;
+  color: #7c7c7c;
+  text-decoration: none;
+  
+
+}
+
+ul, #links {
+padding: 15px 0 0 120px ;
+position: relative;
+margin: 0 0 0 0;
+}
+
+.content {
+  margin-top: 80px;
+}
 
 /**text containers*/
 .article-container {
   position: absolute;
-  top: 100px;
+  top: 190px;
   left: 0;
   right: 0;
 }
@@ -56,13 +155,30 @@ a:link,
   background-color: white;
   opacity: 0.5;
   border-radius: 10px;
-  z-index: 1;
   margin: 0 auto;
+  color: #595f6d;
 
 
 }
 
-/* The popup form - hidden by default
+
+/* padding just on sections not appplic to internal links*/
+#section1 #section2 #section3 #section4,
+h2 {
+  font-family: 'Arapey', serif;
+}
+
+#section1 #section2 #section3 #section4,
+p {
+font-size: 24px;
+}
+
+
+/*Popup form
+
+POPIN FROM BOTTOM EVENTUALLY, CENTER CONTAINER 
+
+  transition: opacity 3s ease-in-out;
 */
 
 #relative-layer {
@@ -80,45 +196,57 @@ a:link,
 /* Form container styles */
 
 .form-container {
-  background-color: white;
+  background-color: #334b6bd7;
   width: 40%;
   border-radius: 10px;
-  position:fixed;
+  position: fixed;
   top: 120px;
   margin: 0 auto;
   left: 0;
   right: 0;
+  padding: 15px;
 }
 
-/* Full-width input fields */
+/*input fields */
 .form-container input[type=text],
 #message {
   padding: 15px;
   border: none;
   background: #f1f1f1;
+  outline: none;
 }
 
 #message {
   width: 90%;
   margin: 20px auto;
+  border-radius: 5px;
 }
 
+#email {
+  outline: none;
+  border: none;
+  padding: 5px 0px 5px 0px;
+  background-color: #eeeeee;
+  border-radius: 5px;
+
+}
 
 /* When the inputs get focus, do something */
-.form-container input[type=text]:focus,
-.form-container input[type=password]:focus {
+.form-container input[type=email]:focus .email {
   background-color: #eeeeee;
-  outline: none;
+
 }
 
 /* Button Stylihng*/
+
+
 .form-container .btn {
   background-color: rgb(177, 181, 223);
   color: black;
   padding: 16px 16px;
   border: none;
   cursor: pointer;
-  width: 90%;
+  width: 50%;
   margin-bottom: 10px;
   opacity: 0.8;
   border-radius: 10px;
@@ -134,3 +262,27 @@ a:link,
   color: black;
   opacity: 0.5;
 }
+
+
+/*
+h1 {
+  font-family: 'Arapey', serif;
+}
+
+h2 {
+  font-family: 'DM Serif Display', serif;
+}
+
+h3 {
+  font-family: 'Josefin Sans', sans-serif;
+
+}
+
+p {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 24px;
+}
+
+
+
+sticky button bottom of page to scroll back to top*/

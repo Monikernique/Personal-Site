@@ -4,11 +4,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Monique Ritzer</title>
+  <title>Monique Ritzer WebDev</title>
   <link rel="stylesheet" type="text/css" href="Css/style.css">
   <link rel="stylesheet" type="text/css" href="Css/bootstrap.css">
+  <link rel="icon" href="faviconplane.ico?v=2">
   <script src="https://kit.fontawesome.com/d13b9b4bce.js" crossorigin="anonymous"></script>
-  <!-- font link from google-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Arapey&family=DM+Serif+Display&family=Josefin+Sans:wght@300&display=swap"
+    rel="stylesheet">
+
+
+    <!---break up the about, experience etc boxes. make it more dynamic and add photography section-->
+
 
 <body>
   <div class="navigation">
@@ -31,9 +40,9 @@
             from
             you </h6><br>
 
-          <label for="email"><b>Email</b></label>
+          <label for="email"><b>Your Email</b></label>
 
-          <input type="text" placeholder="Enter Email" name="email" required>
+          <input type="email" id="email" placeholder="Enter Email" name="email" minlength="4" required>
 
           <textarea id="message" placeholder="Your message here." required></textarea>
 
@@ -48,31 +57,79 @@
     </div>
   </div>
 
+  <!--
+<div class="nav">
+  <li><a href="mailto:ritzer.my@gmail.com">
+  <i class="far fa-paper-plane"></i>
+</a></li> --->
+
+  <!---add ALT for background-->
+  <div class="intro">Hi, my name is Monique</div>
+  <div class="article-container">
+    <div class="article">
+      <div class="subnav">
+        <ul id="links">
+          <!-- Link to every section in the page -->
+          <a href="#section1">about me</a>
+          <a href="#section2">experience</a>
+          <a href="#section3">projects</a>
+          <a href="#section4">UIUX</a>
+        </ul>
+
+
+      </div>
+      <div class="content">
+        <!--Hyperlink to the different sections eventually-->
+
+        <!---
+        <h1>Font test Arapey Monique Ritzer</h1>
+        <h2>Font test DM Serif Monique Ritzer</h2>
+        <h3>Font test Josefin Monique Ritzer</h3>-->
+        <section id="section1">
+          <h2>about me</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat.</p>
+        </section>
+
+        <section id="section2">
+          <h2>experience</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat..</p>
+        </section>
+
+        <section id="section3">
+          <h2>projects</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
+
+
+          <section id="section4">
+            <h2>UIUX</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. </p>
+          </section>
+        </section>
+      </div>
+    </div>
+  </div>
+
+
 
   <div id="blurred-image-container">
     <div class="img-src" style="background-image:url('images/bg_04.jpg')"></div>
     <div class="img-src blurred-img" style="background-image:url('images/blurred/bg_04.jpg')"></div>
   </div>
 
-  <div class="article-container">
-    <div class="article">
-      <h1>Monique Ritzer</h1>
-      <div class="content">
-        <!--Hyperlink to the different sections eventually-->
-        about me<br>
-        experience<br>
-        projects <br>
-        UIUX<br>
-      </div>
-    </div>
-  </div>
+
+  <!-- JS-->
+  <script type="text/javascript" src="js/bootstrap.bundle.js"></script>
+  <script src="js/jquery3.6.3.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
 
 
-</body>
-<!-- JS-->
-<script type="text/javascript" src="js/bootstrap.bundle.js"></script>
-<script src="js/jquery3.6.3.js"></script>
-<script type="text/javascript" src="js/script.js"></script>
+
+
 
 </body>
 
