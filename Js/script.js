@@ -1,20 +1,3 @@
-/*var images = ['bg_01.jpg',
-          'bg_02.jpg', 
-          'bg_03.jpg', 
-          'bg_04.jpg', 
-          'bg_05.jpg', 
-          'bg_06.jpg', 
-          'bg_07.jpg', 
-          'bg_08.jpg', 
-          'bg_09.jpg', 
-          'bg_10.jpg',
-          'bg_11.jpg',
-          "bg_12.jpg",
-          "bg_13.jpg",
-          "bg_14.jpg",];
-$('#bg').css({'background-image' : 'url(images/' + images[Math.floor(Math.random() * images.length)] + ')'});*/
-
-
 
 /*Background*/ 
 $(window).scroll(function() {
@@ -37,12 +20,3 @@ function closeForm() {
 
 }
 
-
-
-
-/*
-
-  window.close()
- click anywhere outside of form
-
-  */
