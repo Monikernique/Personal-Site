@@ -65,10 +65,14 @@ a:link,
 }
 
 ul, #links {
-padding: 15px 0 0 120px ;
 position: relative;
-margin: 0 0 0 0;
+width: 100%;
+  height: auto;
+  background-color: white;
+  opacity: 0.3;
+  color: #595f6d;
 }
+
 
 .content {
   margin-top: 80px;
@@ -82,16 +86,24 @@ margin: 0 0 0 0;
   right: 0;
 }
 
-.article {
+#section1, #section2 {
   width: 75%;
-  height: 2000px;
+  height: 400px;
   background-color: white;
   opacity: 0.5;
   border-radius: 10px;
-  margin: 0 auto;
+  margin: 50px auto;
   color: #595f6d;
+}
 
-
+#section3, #section4 {
+  width: 75%;
+  height: 400px;
+  background-color: white;
+  opacity: 0.5;
+  border-radius: 10px;
+  margin: 50px auto;
+  color: #595f6d;
 }
 
 
@@ -108,10 +120,6 @@ font-size: 24px;
 
 
 /*Popup form
-
-POPIN FROM BOTTOM EVENTUALLY, CENTER CONTAINER 
-
-  transition: opacity 3s ease-in-out;
 */
 
 #relative-layer {
