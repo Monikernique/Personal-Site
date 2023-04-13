@@ -1,2 +1,10 @@
 # Personal Site
- personal draft
+
+Drafts on drafts on drafts 
+
+
+
+
+[Project image links]
+(images/bgclear.jpg)
+(images/bgblur.jpg)
